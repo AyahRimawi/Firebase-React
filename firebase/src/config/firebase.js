@@ -9,7 +9,19 @@ import { getAuth, GoogleAuthProvider, signOut } from "firebase/auth";
 // import { getDocs } from "firebase/firestore";
 // import { collection } from "firebase/firestore";
 // import { addDoc } from "firebase/firestore";
-import { getFirestore, collection, getDocs, addDoc } from "firebase/firestore";
+// import { deleteDoc } from "firebase/firestore";
+// import { updateDoc } from "firebase/firestore";
+// import { doc } from "firebase/firestore";
+
+import {
+  getFirestore,
+  collection,
+  getDocs,
+  addDoc,
+  deleteDoc,
+  updateDoc,
+  doc,
+} from "firebase/firestore";
 
 const firebaseConfig = {
   apiKey: "AIzaSyA42FpCHdt_lXBrQ4ujSFYR2Cu-Ehrvgx8",
@@ -29,3 +41,6 @@ export const db = getFirestore(app);
 export { getDocs };
 export { collection };
 export { addDoc };
+export { deleteDoc };
+export { updateDoc };
+export { doc };
