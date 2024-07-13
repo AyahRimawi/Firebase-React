@@ -1,9 +1,14 @@
 import { initializeApp } from "firebase/app";
-import { getAuth } from 'firebase/auth';
-import { GoogleAuthProvider } from "firebase/auth";
-import { signOut } from "firebase/auth";
 
+// import { getAuth } from 'firebase/auth';
+// import { GoogleAuthProvider } from "firebase/auth";
+// import { signOut } from "firebase/auth";
+import { getAuth, GoogleAuthProvider, signOut } from "firebase/auth";
 
+// import { getFireStore } from "firebase/firestore";
+// import { getDocs } from "firebase/firestore";
+// import { collection } from "firebase/firestore";
+import { getFirestore, collection, getDocs } from "firebase/firestore";
 
 const firebaseConfig = {
   apiKey: "AIzaSyA42FpCHdt_lXBrQ4ujSFYR2Cu-Ehrvgx8",
@@ -19,3 +24,6 @@ const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
 export const googleProvider = new GoogleAuthProvider();
 export { signOut };
+export const db = getFirestore(app);
+export { getDocs };
+export { collection };
